@@ -135,6 +135,18 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  
+  let regex = /^(\d*\s)\S*\s/ ;
+//  let result1 = str.match(regex)[0]    // amount + unit + space
+//let result1 = str.match(regex)[0].length;  // (result1 -1) gives the index of the desired space to remove it with anything before it.  .slice(input) will solve it
+
+// let newArr=[];
+for(let i =0; i<gruffaloCrumble.ingredients.length; i++){
+  let deleteLenght = gruffaloCrumble.ingredients[i].match(regex)[0].length;
+  let name =gruffaloCrumble.ingredients[i].slice(deleteLenght);
+  result.push(name);
+  //console.log(name);
+}
   return result;
 };
 
