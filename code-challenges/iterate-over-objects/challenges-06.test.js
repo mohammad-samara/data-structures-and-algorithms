@@ -138,6 +138,27 @@ const hasChildrenValues = (arr, character) => {
     if(found){
         if(arr[targetedIndex].children != []){return true;}else{return false;}
     }
+
+    //other solution
+    // const hasChildrenValues = (arr, character) => {
+      // Solution code here...
+      
+    //     for(let i =0 ; i<arr.length ; i++){
+    //         if(arr[i].name===character){
+    //         if (Object.values( arr[i].children)==[]){
+    //             return false;
+            
+    //         }
+    //         else{
+    //             return true;
+    //         }
+    //       }
+        
+    //   }
+      
+    // };
+    
+    //end of other solution
 };
 
 /* ------------------------------------------------------------------------------------------------
