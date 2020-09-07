@@ -17,4 +17,4 @@ Write a function called `insertShiftArray` which takes in an array and the value
 
 ## Solution
 
-![white boarding](./assets/array-shift.jpg)
+![white boarding](../../assets/array-shift.jpg)
