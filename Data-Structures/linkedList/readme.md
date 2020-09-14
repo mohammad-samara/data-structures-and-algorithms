@@ -14,6 +14,7 @@ Create a singly linked list with these features:
 - `append()`which adds a new node with the given value to the end of the list
 - `insertBefore()` which add a new node with the given newValue immediately before the first value node.
 - `insertAfter()` which add a new node with the given newValue immediately after the first value node.
+- `kthFromEnd` which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
 
 ## Approach & Efficiency
 
@@ -23,5 +24,6 @@ Create a singly linked list with these features:
 
 ## Solution
 
-![white boarding](../../assets/linked-list-ch5-01.jpg)
-![white boarding](../../assets/linked-list-ch6-01.jpg)
+![white boarding5](../../assets/linked-list-ch5-01.jpg)
+![white boarding6](../../assets/linked-list-ch6-01.jpg)
+![white boarding7](../../assets/linked-list-ch7-01.jpg)
