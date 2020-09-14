@@ -97,6 +97,26 @@ class LinkedList {
     return ;
   }
 
+  kthFromEnd(val){
+    let myArr=[];
+    let current = this.head;
+    if(!current){
+      return 'Linked list is empty.';
+    }
+    while (current.next){
+      //myArr.push(current.value);
+      myArr[myArr.length] = current.value;
+      current = current.next;
+    }
+    myArr.push(current.value);
+    const myVar= myArr.length-1;
+    const diff = myVar - val ;
+    if (val > myVar || val < 0 || val === undefined || typeof val !== 'number'){
+      return 'Exception';
+    }else{
+      return myArr[diff];
+    }
+  }
 
 }
 
