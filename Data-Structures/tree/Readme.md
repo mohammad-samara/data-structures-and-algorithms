@@ -1,6 +1,7 @@
 # Tree and Binary Search Tree
 
-You need to implement a Binary tree and a Binary tree search, in binary tree you need to have preorder, inorder and postorder searching methods, and in the binary tree search you need to have add and search methods.
+You need to implement a Binary tree and a Binary tree search, in binary tree you need to have preorder, inorder and postorder searching methods, and in the binary tree search you need to have add and search methods.  
+extend the tree class with find-maximum-value method
 
 ## challenge
 
@@ -10,6 +11,8 @@ You need to implement a Binary tree and a Binary tree search, in binary tree you
 
 Create a BinarySearchTree class, Define a method named add that accepts a value, and adds a new node with that value in the correct location in the binary search tree.
 Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
+
+- Write an instance method called find-maximum-value. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
 
 ## Approach & Efficiency
 
@@ -26,6 +29,9 @@ Big O of space is O(w) where w is the width of the tree
 - Binary Tree Search: Big O of time is O(h) where h is height  
 Big O of space is O(1) since we are not allocating additional space.
 
+- find-maximum-value: Big O of time for searching is O(n) because it will compare max value with each node in the tree.  
+Big O of space is O(1) since we are allocating a constant space in the memory(the space does not change whatever is the input)
+
 ## API
 
 - `preOrder`: returns the values of the root, then the left nodes, then the right nodes.
@@ -38,6 +44,9 @@ Big O of space is O(1) since we are not allocating additional space.
 
 - `contains(value)`: search a tree for a value and returns true if its found, otherwise returns false.
 
+- `findMaximumValue`: return the maximum value stored in the tree
+
 ## Solution
 
 ![UML Diagram](../../assets/Binary-Tree-and-BST.jpg)
+![UML Diagram](../../assets/ch-16.png)
