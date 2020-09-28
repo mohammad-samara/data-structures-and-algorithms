@@ -61,6 +61,20 @@ class BinaryTree {
     return maxValue;
   }
 
+  breadthFirst(){
+    let results = [];
+    let queue = [];
+    if(!this.root){return 'empty tree';}
+    queue.push(this.root);
+    while(queue.length){
+      let node = queue.shift();
+      results.push(node.value);
+      if(node.left !==null) queue.push(node.left);
+      if (node.right !== null) queue.push(node.right);
+    }
+    return results;
+  }
+
 }
 
 module.exports = BinaryTree;
