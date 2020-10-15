@@ -26,14 +26,15 @@ class LinkedList {
   }
 
   find(key) { //find the key value in the linked list
+    console.log('-------------------------------',key);
     let currentNode = this.head;
     let currentValueObject = currentNode.value;
-    if (key === Object.keys(currentValueObject)[0]) { return currentValueObject.key; }
+    if (key === Object.keys(currentValueObject)[0]) { return currentValueObject; }
     else {
       while (currentNode.next) {
         currentNode = currentNode.next;
         let currentValueObject = currentNode.value;
-        if (key === Object.keys(currentValueObject)[0]) { return currentValueObject.key; }
+        if (key === Object.keys(currentValueObject)[0]) { return currentValueObject; }
         else{return 'key not found';}
       }
     }
@@ -81,14 +82,14 @@ class Hashmap {
     const index = this.hash(key);
     //return what value we have of that key index in the storage
     console.log(this.storage[index]);
-    return this.storage[index];
+    return this.storage[index]? this.storage[index].find(key) : 'key not found';
   }
 
-  // To find one key values
-  //   getOne(key) {
-  //     let hash = this.hash(key);
-  //     return this.storage[hash]?this.storage[hash].values():'key not found';
-  //   }
+  // To find the whole ll at index generated from the key
+  getAllLl(key) {
+    let hash = this.hash(key);
+    return this.storage[hash]?this.storage[hash].values():'key not found';
+  }
 
   // To check if the key exist in the hash map array
   contains(key) {
